@@ -1,0 +1,94 @@
+turnof_lights:
+  alias: Turn OFF Lights and Magic Mirror
+  sequence:
+  - data:
+      entity_id: light.tvlight1
+    service: light.turn_off
+  - data:
+      entity_id: light.tvlight2
+    service: light.turn_off
+  - alias: ''
+    data:
+      entity_id: light.officelight
+    service: light.turn_off
+  - data:
+      entity_id: switch.lamplight
+    service: switch.turn_off
+  - data:
+      entity_id: switch.magicmirror
+    service: switch.turn_off
+  - data:
+      entity_id: switch.polelight
+    service: switch.turn_off
+  - data:
+      entity_id: switch.bedroomlight
+    service: switch.turn_off
+turnon_lights:
+  alias: Turn ON Lights and Magic Mirror
+  sequence:
+  - data:
+      entity_id: light.tvlight1
+    service: light.turn_on
+  - data:
+      entity_id: light.tvlight2
+    service: light.turn_on
+  - alias: ''
+    data:
+      entity_id: light.officelight
+    service: light.turn_on
+  - data:
+      entity_id: switch.lamplight
+    service: switch.turn_on
+  - data:
+      entity_id: switch.magicmirror
+    service: switch.turn_on
+  - data:
+      entity_id: switch.polelight
+    service: switch.turn_on
+return:
+  alias: Return
+  sequence:
+  - alias: ''
+    data: {}
+    service: script.turnon_lights
+  - data:
+      away_mode: false
+      entity_id: climate.home
+    service: climate.set_away_mode
+  - data:
+      entity_id: remote.watch_tv
+    service: remote.turn_on
+good_night:
+  alias: Good Night
+  sequence:
+  - alias: ''
+    data: {}
+    service: script.turnof_lights
+  - data:
+      entity_id: climate.home
+      operation_mode: cool
+      temperature: '73'
+    service: climate.set_temperature
+  - data:
+      entity_id: remote.watch_tv
+    service: remote.turn_off
+away:
+  alias: Away
+  sequence:
+  - data:
+      entity_id: remote.watch_tv
+    service: remote.turn_off
+  - service: script.turnof_lights
+  - data:
+      away_mode: true
+      entity_id: climate.home
+    service: climate.set_away_mode
+good_morning:
+  alias: Good Morning
+  sequence:
+  - data: {}
+    service: script.return
+  - data:
+      entity_id: switch.bedroomlight
+    service: switch.turn_on
+

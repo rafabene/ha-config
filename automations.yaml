@@ -1,0 +1,31 @@
+- id: '1551457245407'
+  alias: Away
+  trigger:
+  - entity_id: device_tracker.google_maps_101249276485332727035
+    from: home
+    platform: state
+    to: not_home
+  condition: []
+  action:
+  - service: script.away
+- id: '1551457272400'
+  alias: Return
+  trigger:
+  - entity_id: device_tracker.google_maps_101249276485332727035
+    from: not_home
+    platform: state
+    to: home
+  condition: []
+  action:
+  - service: script.return
+- id: '1551632927078'
+  alias: Wake up at 9 AM
+  trigger:
+  - at: 09:00
+    platform: time
+  condition:
+  - condition: state
+    entity_id: device_tracker.google_maps_101249276485332727035
+    state: home
+  action:
+  - service: script.good_morning
