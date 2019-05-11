@@ -45,11 +45,6 @@ camera:
     host: '192.168.0.4'
     password: !secret camera
 
-  - platform: yi
-    name: Guest Room
-    host: '192.168.0.5'
-    password: !secret camera
-    
 media_player:
   - platform: spotify
     client_id: dd66dea98f574ce3b958bbec770dcc4b
