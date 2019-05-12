@@ -1,0 +1,91 @@
+{
+    "data": {
+        "config": {
+            "title": "Home",
+            "views": [
+                {
+                    "badges": [
+                        "device_tracker.google_maps_101249276485332727035",
+                        "device_tracker.2016_jeep_wrangler_unlimited",
+                        "device_tracker.troller",
+                        "sensor.yr_symbol",
+                        "sun.sun"
+                    ],
+                    "cards": [
+                        {
+                            "entity": "camera.living_room",
+                            "type": "picture-entity"
+                        },
+                        {
+                            "entity": "camera.bedroom",
+                            "type": "picture-entity"
+                        },
+                        {
+                            "entity": "climate.home",
+                            "type": "thermostat"
+                        },
+                        {
+                            "entity": "media_player.spotify",
+                            "type": "media-control"
+                        },
+                        {
+                            "entities": [
+                                "remote.watch_tv",
+                                "remote.roku_yu003s474027"
+                            ],
+                            "title": "Remote",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.tvlight1"
+                                },
+                                {
+                                    "entity": "light.tvlight2"
+                                },
+                                {
+                                    "entity": "switch.polelight"
+                                },
+                                {
+                                    "entity": "switch.lamplight"
+                                },
+                                {
+                                    "entity": "switch.bedroomlight"
+                                },
+                                {
+                                    "entity": "switch.magicmirror"
+                                }
+                            ],
+                            "title": "Lights",
+                            "type": "entities"
+                        }
+                    ],
+                    "path": "default_view",
+                    "title": "Home"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "group.all_automations"
+                                },
+                                {
+                                    "entity": "group.all_scripts"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Scripts",
+                            "type": "entities"
+                        }
+                    ],
+                    "title": "Scripts"
+                }
+            ]
+        }
+    },
+    "key": "lovelace",
+    "version": 1
+}
