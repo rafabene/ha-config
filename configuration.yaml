@@ -29,7 +29,13 @@ device_tracker:
     client_id: 223aa7a77accb58ff165
     secret: !secret automatic
     devices:
-      - 2016 Jeep Wrangler Unlimited  
+      - 2016 Jeep Wrangler Unlimited
+      
+  - platform: traccar
+    host: server.traccar.org
+    port: 80
+    username: rafabene@gmail.com
+    password: !secret traccar
 nest:
   client_id: aeeddc17-ffe2-4f40-ab39-bef918225853
   client_secret: !secret nest
@@ -39,11 +45,13 @@ camera:
     name: Living Room
     host: '192.168.0.3'
     password: !secret camera
+    ffmpeg_arguments: '-vf scale=800:450'
 
   - platform: yi
     name: Bedroom
     host: '192.168.0.4'
     password: !secret camera
+    ffmpeg_arguments: '-vf scale=800:450'
 
 media_player:
   - platform: spotify

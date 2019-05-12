@@ -1,2 +1,7 @@
 device_tracker.2016_jeep_wrangler_unlimited:
   entity_picture: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-h4g6mZidN997BmaSOqyh_fqsjU0w4m-lVFo72WQwK533m3h-1w
+device_tracker.google_maps_101249276485332727035:
+  friendly_name: Rafael Benevides
+device_tracker.troller:
+  entity_picture: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtKXIX4IZKIS-bq-9MAqwHzExxqmkNqQORAPEwRminAbmqqeNT
+  friendly_name: Troller

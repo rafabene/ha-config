@@ -3,3 +3,5 @@ home-assistant*
 secrets.yaml
 harmony_watch_tv.conf
 known_devices.yaml
+traccar.xml
+
