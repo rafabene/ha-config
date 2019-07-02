@@ -27,5 +27,8 @@
   - condition: state
     entity_id: device_tracker.google_maps_101249276485332727035
     state: home
+  - condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: '''on'''
   action:
   - service: script.good_morning

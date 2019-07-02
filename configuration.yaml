@@ -12,7 +12,11 @@ homeassistant:
   time_zone: America/New_York
   # Customization file
   customize: !include customize.yaml
-  
+
+binary_sensor:
+  - platform: workday
+    country: BR
+
 zone:
   - name: Home
     latitude: 28.375087
@@ -62,7 +66,7 @@ remote:
   - platform: harmony
     name: Watch TV
     host: 192.168.0.8
-    activity: Watch TV
+    activity: Youtube
 
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:

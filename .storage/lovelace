@@ -21,10 +21,6 @@
                             "type": "picture-entity"
                         },
                         {
-                            "entity": "climate.home",
-                            "type": "thermostat"
-                        },
-                        {
                             "entity": "media_player.spotify",
                             "type": "media-control"
                         },
@@ -55,6 +51,9 @@
                                 },
                                 {
                                     "entity": "switch.magicmirror"
+                                },
+                                {
+                                    "entity": "light.officelight"
                                 }
                             ],
                             "title": "Lights",
